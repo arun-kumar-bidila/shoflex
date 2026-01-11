@@ -62,6 +62,10 @@ flutter:
   assets:
     - assets/
     - assets/backarrow.svg
+    - assets/home.svg
+    - assets/notification.svg
+    - assets/orders.svg
+    - assets/profile.svg
 
 
 

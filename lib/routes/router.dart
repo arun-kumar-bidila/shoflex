@@ -3,6 +3,7 @@ import 'package:shoflex/features/auth/screens/create_account.dart';
 import 'package:shoflex/features/auth/screens/email_login.dart';
 import 'package:shoflex/features/auth/screens/forgot_password.dart';
 import 'package:shoflex/features/auth/screens/password_login.dart';
+import 'package:shoflex/widgets/bottombar.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {
   switch (routeSettings.name) {
@@ -15,9 +16,9 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
     case PasswordLogin.routeName:
       return MaterialPageRoute(
           settings: routeSettings, builder: (_) => PasswordLogin());
-    // case Bottombar.routeName:
-    //   return MaterialPageRoute(
-    //       settings: routeSettings, builder: (_) => Bottombar());
+    case Bottombar.routeName:
+      return MaterialPageRoute(
+          settings: routeSettings, builder: (_) => Bottombar());
     // case EmailVerification.routeName:
     //   return MaterialPageRoute(
     //       settings: routeSettings, builder: (_) => EmailVerification());
