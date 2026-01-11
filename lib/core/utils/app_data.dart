@@ -1,4 +1,5 @@
 import 'package:shoflex/models/product_model.dart';
+import 'package:shoflex/models/review_model.dart';
 
 final List<Product> dummyProducts = [
   // --- HOODIES ---
@@ -178,5 +179,27 @@ final List<Product> trendingProducts = [
     returnCondition: "Free returns for defects.",
     rating: 4.7,
    images: ["assets/products/shirt.png","assets/products/shirt.png"],
+  ),
+];
+
+
+final List<Review> reviews = [
+  Review(
+    name: "Alex Morgan",
+    rating: 5,
+    comment: "Great quality jacket, very comfortable and stylish.",
+    date: "12 days ago",
+  ),
+  Review(
+    name: "Sam Smith",
+    rating: 4,
+    comment: "The material is premium, though the sizing runs a bit large.",
+    date: "5 days ago",
+  ),
+  Review(
+    name: "Jordan Reed",
+    rating: 5,
+    comment: "Perfect for daily wear. Fast shipping too!",
+    date: "1 day ago",
   ),
 ];
