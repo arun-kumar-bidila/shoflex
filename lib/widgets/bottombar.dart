@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoflex/core/constants/app_colors.dart';
-import 'package:shoflex/features/cart/widgets/empty_cart.dart';
+import 'package:shoflex/features/home/screens/home_screen.dart';
 import 'package:shoflex/features/notification/screens/notifications_screen.dart';
-import 'package:shoflex/features/orders/screens/order_placed.dart';
 import 'package:shoflex/features/orders/widgets/no_orders.dart';
 import 'package:shoflex/features/profile/screens/profile_screen.dart';
 
@@ -19,7 +18,7 @@ class _BottombarState extends State<Bottombar> {
   int page = 0;
 
   final List<Widget> pages = [
-    OrderPlaced(),
+    HomeScreen(),
     NotificationsScreen(),
     NoOrders(),
     ProfileScreen()

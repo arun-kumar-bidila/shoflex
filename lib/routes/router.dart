@@ -3,6 +3,7 @@ import 'package:shoflex/features/auth/screens/create_account.dart';
 import 'package:shoflex/features/auth/screens/email_login.dart';
 import 'package:shoflex/features/auth/screens/forgot_password.dart';
 import 'package:shoflex/features/auth/screens/password_login.dart';
+import 'package:shoflex/features/cart/screens/cart_screen.dart';
 import 'package:shoflex/widgets/bottombar.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {
@@ -19,15 +20,14 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
     case Bottombar.routeName:
       return MaterialPageRoute(
           settings: routeSettings, builder: (_) => Bottombar());
-    // case EmailVerification.routeName:
-    //   return MaterialPageRoute(
-    //       settings: routeSettings, builder: (_) => EmailVerification());
+
     case ForgotPassword.routeName:
       return MaterialPageRoute(
           settings: routeSettings, builder: (_) => ForgotPassword());
-    // case ResetPassword.routeName:
-    //   return MaterialPageRoute(
-    //       settings: routeSettings, builder: (_) => ResetPassword());
+    case CartScreen.routeName:
+      return MaterialPageRoute(
+          settings: routeSettings, builder: (_) => CartScreen());
+
     default:
       return MaterialPageRoute(
           settings: routeSettings,
