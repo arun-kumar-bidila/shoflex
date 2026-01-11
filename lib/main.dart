@@ -4,6 +4,7 @@ import 'package:shoflex/features/cart/widgets/empty_cart.dart';
 import 'package:shoflex/features/orders/screens/order_placed.dart';
 import 'package:shoflex/features/orders/widgets/no_orders.dart';
 import 'package:shoflex/routes/router.dart';
+import 'package:shoflex/widgets/bottombar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       onGenerateRoute: (settings) => generateRoute(settings),
-      home: OrderPlaced(),
+      home: Bottombar(),
     );
   }
 }

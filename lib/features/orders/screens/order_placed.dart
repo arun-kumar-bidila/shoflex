@@ -40,7 +40,7 @@ class _OrderPlacedState extends State<OrderPlaced> {
                   topRight: Radius.circular(40),
                 ),
               ),
-              padding: EdgeInsets.symmetric(horizontal: 30, vertical: 40),
+              padding: EdgeInsets.only(left: 30,right: 30, top: 40),
               child: Column(
                 children: [
                   const Text(
