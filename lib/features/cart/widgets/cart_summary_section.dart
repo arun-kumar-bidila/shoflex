@@ -3,10 +3,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 import 'package:shoflex/core/constants/app_colors.dart';
 import 'package:shoflex/features/cart/screens/payment_screen.dart';
-import 'package:shoflex/features/orders/screens/orders_screen.dart';
+
 import 'package:shoflex/providers/cart_provider.dart';
-import 'package:shoflex/providers/order_provider.dart';
-import 'package:shoflex/widgets/bottombar.dart';
+
 import 'package:shoflex/widgets/custom_button.dart';
 
 class CartSummarySection extends StatelessWidget {
@@ -95,7 +94,8 @@ class CartSummarySection extends StatelessWidget {
                 style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
-                    color: Colors.black),
+                    color: Colors.black,
+                    fontFamily: "Gabarito"),
               ),
             ],
           ),

@@ -84,10 +84,10 @@ class _OrdersScreenState extends State<OrdersScreen> {
                             child: Text(
                               "Orders",
                               style: const TextStyle(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w700,
-                                color: Colors.black,
-                              ),
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                  color: Colors.black,
+                                  fontFamily: "Gabarito"),
                             ),
                           ),
                         ),
@@ -121,12 +121,11 @@ class _OrdersScreenState extends State<OrdersScreen> {
                                   const EdgeInsets.symmetric(horizontal: 16),
                               alignment: Alignment.center,
                               decoration: BoxDecoration(
-                                color: isSelected ? Colors.blue : Colors.white,
-                                borderRadius: BorderRadius.circular(20),
-                                border: Border.all(
-                                    color: isSelected
-                                        ? Colors.blue
-                                        : Colors.grey.shade300),
+                                color: isSelected
+                                    ? Colors.blue
+                                    : AppColors.fillColor,
+                                borderRadius: BorderRadius.circular(100),
+                                
                               ),
                               child: Text(
                                 statusNames[index],
@@ -143,7 +142,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
                       ),
                     ),
 
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 30),
 
                     // ORDERS LIST
                     Expanded(
@@ -167,15 +166,15 @@ class _OrdersScreenState extends State<OrdersScreen> {
                               child: Row(
                                 children: [
                                   SvgPicture.asset(
-                                    "assets/orders.svg",
-                                    width: 20,
-                                    height: 20,
+                                    "assets/orders2.svg",
+                                    width: 25,
+                                    height: 25,
                                     colorFilter: ColorFilter.mode(
                                       Colors.black,
                                       BlendMode.srcIn,
                                     ),
                                   ),
-                                  const SizedBox(width: 12),
+                                  const SizedBox(width: 15),
                                   Expanded(
                                     child: Column(
                                       crossAxisAlignment:

@@ -31,7 +31,7 @@ class ProductQuantitySelector extends StatelessWidget {
               "Quantity",
               style: TextStyle(
                 fontSize: 16,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w500,
               ),
             ),
 

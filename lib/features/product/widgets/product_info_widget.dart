@@ -21,6 +21,7 @@ class ProductInfoWidget extends StatelessWidget {
             style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w700,
+              fontFamily: "Gabarito"
             ),
           ),
           const SizedBox(height: 6),
@@ -29,7 +30,8 @@ class ProductInfoWidget extends StatelessWidget {
             style: const TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.w700,
-              color: Colors.blue, // Using your blue color preference
+              color: Colors.blue,
+              fontFamily: "Gabarito" 
             ),
           ),
         ],

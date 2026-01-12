@@ -21,12 +21,18 @@ class ProductReviewsWidget extends StatelessWidget {
         children: [
           const Text(
             "Reviews",
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+            style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+                fontFamily: "Gabarito"),
           ),
           const SizedBox(height: 16),
           Text(
             "${product.rating} Ratings",
-            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
+            style: const TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.w700,
+                fontFamily: "Gabarito"),
           ),
           const SizedBox(height: 16),
           Text(
@@ -36,7 +42,6 @@ class ProductReviewsWidget extends StatelessWidget {
                 fontWeight: FontWeight.w500,
                 color: Colors.black54),
           ),
-          
 
           /// Reviews
           Column(
@@ -63,9 +68,7 @@ class ProductReviewsWidget extends StatelessWidget {
                               Text(
                                 review.name,
                                 style: const TextStyle(
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 12
-                                ),
+                                    fontWeight: FontWeight.w500, fontSize: 12,fontFamily: "Gabarito"),
                               ),
                               Row(
                                 children: List.generate(5, (starIndex) {
@@ -87,13 +90,10 @@ class ProductReviewsWidget extends StatelessWidget {
                     Text(
                       review.comment,
                       style: const TextStyle(
-                        color: Colors.black54,
-                        height: 1.4,
-                       
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 12
-                              
-                      ),
+                          color: Colors.black54,
+                          height: 1.4,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 12),
                     ),
                     const SizedBox(height: 10),
                     Text(

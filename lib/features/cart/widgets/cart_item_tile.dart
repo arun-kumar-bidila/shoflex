@@ -42,13 +42,17 @@ class CartItemTile extends StatelessWidget {
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: const TextStyle(
-                            fontWeight: FontWeight.w500, fontSize: 12),
+                          fontWeight: FontWeight.w500,
+                          fontSize: 12,
+                        ),
                       ),
                     ),
                     Text(
                       "₹${cartItem.product.price}",
                       style: const TextStyle(
-                          fontWeight: FontWeight.w700, fontSize: 12),
+                          fontWeight: FontWeight.w700,
+                          fontSize: 12,
+                          fontFamily: "Gabarito"),
                     ),
                   ],
                 ),
@@ -60,46 +64,44 @@ class CartItemTile extends StatelessWidget {
                   children: [
                     Row(
                       children: [
- Text(
-                      "Size - ",
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black54,
-                      ),
-                    ),
-                    Text(
-                      "${cartItem.selectedSize}",
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black,
-                      ),
-                    ),
-                    SizedBox(width: 8,),
-                    Text(
-                      "Color - ",
-                      style: TextStyle(
-                       fontSize: 12,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black54,
-                      ),
-                    ),
-                    Text(
-                      "${cartItem.selectedColor}",
-                      style: TextStyle(
-                        fontSize: 12,
-                         fontWeight: FontWeight.w500,
-                        color: Colors.black,
-                      ),
-                    ),
+                        Text(
+                          "Size - ",
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54,
+                          ),
+                        ),
+                        Text(
+                          "${cartItem.selectedSize}",
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Text(
+                          "Color - ",
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black54,
+                          ),
+                        ),
+                        Text(
+                          "${cartItem.selectedColor}",
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black,
+                          ),
+                        ),
                       ],
                     ),
                     // SIZE & COLOR
-                   
-                   
-
-                    
 
                     // QUANTITY CONTROLS
                     Row(

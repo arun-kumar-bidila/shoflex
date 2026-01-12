@@ -4,6 +4,7 @@ import 'package:shoflex/providers/cart_provider.dart';
 import 'package:shoflex/providers/order_provider.dart';
 import 'package:shoflex/routes/router.dart';
 import 'package:shoflex/widgets/bottombar.dart';
+import 'package:shoflex/widgets/splash_screen.dart';
 
 void main() {
   runApp(
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       onGenerateRoute: (settings) => generateRoute(settings),
-      home: Bottombar(),
+      home: SplashScreen(),
     );
   }
 }

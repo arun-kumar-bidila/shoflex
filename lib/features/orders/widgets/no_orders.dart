@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shoflex/core/constants/app_colors.dart';
+import 'package:shoflex/widgets/bottombar.dart';
 
 class NoOrders extends StatelessWidget {
   const NoOrders({super.key});
@@ -18,6 +19,7 @@ class NoOrders extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
+                  fontFamily: "Gabarito"
                 ),
               ),
             ),
@@ -43,27 +45,32 @@ class NoOrders extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 40),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          Container(
-                            padding: EdgeInsets.symmetric(horizontal: 20),
-                            decoration: BoxDecoration(
-                              color: AppColors.buttonColor,
-                              borderRadius: BorderRadius.circular(100),
-                            ),
-                            alignment: Alignment.center,
-                            height: 52,
-                            child: Text(
-                              "Explore Categories",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 16,
-                                fontWeight: FontWeight.w500,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, Bottombar.routeName);
+                        },
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.symmetric(horizontal: 20),
+                              decoration: BoxDecoration(
+                                color: AppColors.buttonColor,
+                                borderRadius: BorderRadius.circular(100),
+                              ),
+                              alignment: Alignment.center,
+                              height: 52,
+                              child: Text(
+                                "Explore Categories",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ],
                   ),

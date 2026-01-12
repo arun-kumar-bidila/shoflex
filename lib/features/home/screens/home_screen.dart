@@ -39,7 +39,7 @@ class HomeScreen extends StatelessWidget {
                         const Text(
                           "Men",
                           style: TextStyle(
-                              fontWeight: FontWeight.w700, fontSize: 12),
+                              fontWeight: FontWeight.w700, fontSize: 12,fontFamily: "Gabarito"),
                         ),
                         const SizedBox(width: 6),
                         SvgPicture.asset(
@@ -111,7 +111,7 @@ class HomeScreen extends StatelessWidget {
 
               const Text(
                 "Categories",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700,fontFamily: "Gabarito"),
               ),
 
               const SizedBox(height: 14),
@@ -123,7 +123,7 @@ class HomeScreen extends StatelessWidget {
 
               const Text(
                 "Today's Trending",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700,fontFamily: "Gabarito"),
               ),
 
               const SizedBox(height: 16),

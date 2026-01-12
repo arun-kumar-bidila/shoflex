@@ -19,6 +19,7 @@ class NotificationsScreen extends StatelessWidget {
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
                 color: Colors.black,
+                fontFamily: "Gabarito"
               ),
             ),
             const SizedBox(height: 30),

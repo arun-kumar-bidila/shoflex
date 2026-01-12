@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-
 import 'package:provider/provider.dart';
 import 'package:shoflex/core/constants/app_colors.dart';
 import 'package:shoflex/features/orders/screens/order_placed.dart';
-
 import 'package:shoflex/providers/cart_provider.dart';
 import 'package:shoflex/providers/order_provider.dart';
-import 'package:shoflex/widgets/bottombar.dart';
 
 class PaymentSummarySection extends StatelessWidget {
   const PaymentSummarySection({super.key});
@@ -94,7 +91,8 @@ class PaymentSummarySection extends StatelessWidget {
                 style: const TextStyle(
                     fontSize: 16,
                     fontWeight: FontWeight.w700,
-                    color: Colors.black),
+                    color: Colors.black,
+                    fontFamily: "Gabarito"),
               ),
             ],
           ),

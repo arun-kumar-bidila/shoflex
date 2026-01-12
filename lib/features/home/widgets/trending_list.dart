@@ -23,9 +23,8 @@ class TrendingList extends StatelessWidget {
             onTap: () {
               Navigator.pushNamed(
                 context,
-                ProductDetailScreen
-                    .routeName, 
-                arguments: product, 
+                ProductDetailScreen.routeName,
+                arguments: product,
               );
             },
             child: Container(
@@ -70,7 +69,9 @@ class TrendingList extends StatelessWidget {
                         Text(
                           "₹${product.price.toStringAsFixed(2)}",
                           style: const TextStyle(
-                              fontWeight: FontWeight.w700, fontSize: 12),
+                              fontWeight: FontWeight.w700,
+                              fontSize: 12,
+                              fontFamily: "Gabarito"),
                         ),
                       ],
                     ),

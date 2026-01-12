@@ -50,6 +50,7 @@ class PaymentScreen extends StatelessWidget {
                           fontSize: 16,
                           fontWeight: FontWeight.w700,
                           color: Colors.black,
+                          fontFamily: "Gabarito"
                         ),
                       ),
                     ),
@@ -62,6 +63,10 @@ class PaymentScreen extends StatelessWidget {
                 ],
               ),
             ),
+              SizedBox(
+                   
+                    height: 20,
+                  ),
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),

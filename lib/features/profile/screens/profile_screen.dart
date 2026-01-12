@@ -52,6 +52,7 @@ class ProfileScreen extends StatelessWidget {
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w700,
+                                    fontFamily: "Gabarito"
                                   ),
                                 ),
                                 SizedBox(height: 4),
@@ -130,6 +131,7 @@ class ProfileScreen extends StatelessWidget {
                           color: Colors.red,
                           fontSize: 16,
                           fontWeight: FontWeight.w700,
+                          fontFamily: "Gabarito"
                         ),
                       ),
                     ),

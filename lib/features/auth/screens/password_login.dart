@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:shoflex/core/constants/app_colors.dart';
 import 'package:shoflex/features/auth/screens/forgot_password.dart';
+import 'package:shoflex/widgets/bottombar.dart';
 import 'package:shoflex/widgets/custom_button.dart';
 import 'package:shoflex/widgets/custom_textform_field.dart';
 
@@ -50,7 +51,10 @@ class _PasswordLoginState extends State<PasswordLogin> {
               ),
               CustomButton(
                 buttonName: "Continue",
-                onTap: () async {},
+                onTap: () async {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, Bottombar.routeName, (route) => false);
+                },
               ),
               Container(
                 margin: EdgeInsets.only(top: 20),

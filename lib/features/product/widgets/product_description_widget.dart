@@ -34,6 +34,7 @@ class ProductDescriptionWidget extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.w700,
               fontSize: 16,
+              fontFamily: "Gabarito"
             ),
           ),
           const SizedBox(height: 8),

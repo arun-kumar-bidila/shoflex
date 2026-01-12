@@ -52,6 +52,7 @@ class _OrderPlacedState extends State<OrderPlaced> {
                       fontSize: 32,
                       fontWeight: FontWeight.w700,
                       color: Colors.black,
+                      fontFamily: "Gabarito",
                       height: 1.2,
                     ),
                   ),

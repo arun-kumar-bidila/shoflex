@@ -45,10 +45,10 @@ class TrackOrderScreen extends StatelessWidget {
                       child: Text(
                         "Order #45879",
                         style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.black,
-                        ),
+                            fontSize: 16,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.black,
+                            fontFamily: "Gabarito"),
                       ),
                     ),
                   ),
@@ -76,7 +76,7 @@ class TrackOrderScreen extends StatelessWidget {
               const SizedBox(height: 25),
 
               const Text("Order Items",
-                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
+                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16,fontFamily: "Gabarito")),
               const SizedBox(height: 12),
               Container(
                 padding: const EdgeInsets.all(16),
@@ -98,7 +98,8 @@ class TrackOrderScreen extends StatelessWidget {
                           style: TextStyle(
                               color: AppColors.buttonColor,
                               fontWeight: FontWeight.w700,
-                              fontSize: 12)),
+                              fontSize: 12,
+                              fontFamily: "Gabarito")),
                     )
                   ],
                 ),
@@ -107,7 +108,7 @@ class TrackOrderScreen extends StatelessWidget {
               const SizedBox(height: 25),
 
               const Text("Shipping details",
-                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
+                  style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16,fontFamily: "Gabarito")),
               const SizedBox(height: 12),
               Container(
                 width: double.infinity,
@@ -194,6 +195,7 @@ class TrackOrderScreen extends StatelessWidget {
                     date,
                     style: TextStyle(
                       fontSize: 12,
+                      fontWeight: FontWeight.w500,
                       color: isCompleted ? Colors.black : Colors.black54,
                     ),
                   ),

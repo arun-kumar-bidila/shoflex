@@ -38,7 +38,8 @@ class _EmailLoginState extends State<EmailLogin> {
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 32,
-                    fontWeight: FontWeight.w700),
+                    fontWeight: FontWeight.w700,
+                    ),
               ),
               SizedBox(
                 height: 30,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:shoflex/core/constants/app_colors.dart';
+import 'package:shoflex/features/auth/screens/email_login.dart';
 import 'package:shoflex/widgets/custom_button.dart';
 import 'package:shoflex/widgets/custom_textform_field.dart';
 
@@ -55,7 +56,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
 
               Text(
                 "Forgot Password",
-               style: TextStyle(
+                style: TextStyle(
                     color: Colors.black,
                     fontSize: 32,
                     fontWeight: FontWeight.w700),
@@ -75,7 +76,10 @@ class _ForgotPasswordState extends State<ForgotPassword> {
               ),
               CustomButton(
                 buttonName: "Continue",
-                onTap: () async {},
+                onTap: () async {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, (EmailLogin.routeName), (route) => false);
+                },
               ),
             ],
           ),

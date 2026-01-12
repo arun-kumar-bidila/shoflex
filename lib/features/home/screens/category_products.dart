@@ -52,12 +52,13 @@ class CategoryProducts extends StatelessWidget {
                   Text(
                     "$categoryName (${filteredProducts.length})",
                     style: const TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.w700),
+                        fontSize: 16,
+                        fontWeight: FontWeight.w700,
+                        fontFamily: "Gabarito"),
                   ),
                 ],
               ),
             ),
-            
             Expanded(
               child: GridView.builder(
                 padding: const EdgeInsets.all(16),
@@ -111,7 +112,9 @@ class CategoryProducts extends StatelessWidget {
                               Text(
                                 "₹${product.price.toStringAsFixed(2)}",
                                 style: const TextStyle(
-                                    fontWeight: FontWeight.w700, fontSize: 12),
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 12,
+                                    fontFamily: "Gabarito"),
                               ),
                             ],
                           ),

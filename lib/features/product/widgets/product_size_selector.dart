@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:shoflex/core/constants/app_colors.dart';
 
 class ProductSizeSelector extends StatefulWidget {
   final List<String> sizes;
@@ -29,75 +31,81 @@ class _ProductSizeSelectorState extends State<ProductSizeSelector> {
   void _openSizeBottomSheet() {
     showModalBottomSheet(
       context: context,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
       builder: (_) {
-        return Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text(
-                    "Select Size",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.close),
-                    onPressed: () => Navigator.pop(context),
-                  )
-                ],
-              ),
-              const SizedBox(height: 16),
-              ...widget.sizes.map((size) {
-                final isSelected = selectedSize == size;
-
-                return GestureDetector(
-                  onTap: () {
-                    setState(() => selectedSize = size);
-
-                    /// 🔥 Notify parent
-                    widget.onSizeSelected(size);
-
-                    Navigator.pop(context);
-                  },
-                  child: Container(
-                    margin: const EdgeInsets.only(bottom: 12),
-                    padding: const EdgeInsets.symmetric(
-                      vertical: 14,
-                      horizontal: 16,
-                    ),
-                    decoration: BoxDecoration(
-                      color: isSelected ? Colors.blue : Colors.transparent,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        color:
-                            isSelected ? Colors.blue : Colors.grey.shade300,
+        return Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+            color: AppColors.background,
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Row(
+                  children: [
+                    const SizedBox(width: 48),
+                    const Expanded(
+                      child: Center(
+                        child: Text(
+                          "Select Size",
+                          style: TextStyle(
+                              fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          size,
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w500,
-                            color:
-                                isSelected ? Colors.white : Colors.black,
-                          ),
+                    IconButton(
+                      icon: const Icon(Icons.close),
+                      onPressed: () => Navigator.pop(context),
+                    )
+                  ],
+                ),
+                const SizedBox(height: 16),
+                ...widget.sizes.map((size) {
+                  final isSelected = selectedSize == size;
+
+                  return GestureDetector(
+                    onTap: () {
+                      setState(() => selectedSize = size);
+
+                      widget.onSizeSelected(size);
+
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.only(bottom: 12),
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 14,
+                        horizontal: 16,
+                      ),
+                      decoration: BoxDecoration(
+                        color: isSelected ? Colors.blue : Colors.transparent,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(
+                          color:
+                              isSelected ? Colors.blue : Colors.grey.shade300,
                         ),
-                        if (isSelected)
-                          const Icon(Icons.check, color: Colors.white),
-                      ],
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            size,
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: isSelected ? Colors.white : Colors.black,
+                            ),
+                          ),
+                          if (isSelected)
+                            const Icon(Icons.check, color: Colors.white),
+                        ],
+                      ),
                     ),
-                  ),
-                );
-              }),
-            ],
+                  );
+                }),
+              ],
+            ),
           ),
         );
       },
@@ -122,7 +130,7 @@ class _ProductSizeSelectorState extends State<ProductSizeSelector> {
             children: [
               const Text(
                 "Size",
-                style: TextStyle(fontWeight: FontWeight.w500),
+                style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
               ),
               Row(
                 children: [
@@ -130,7 +138,13 @@ class _ProductSizeSelectorState extends State<ProductSizeSelector> {
                     selectedSize ?? "Select Size",
                     style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
-                  const Icon(Icons.keyboard_arrow_down, color: Colors.grey),
+                  SizedBox(
+                    width: 20,
+                  ),
+                  SvgPicture.asset(
+                    "assets/arrowdown.svg",
+                    width: 15,
+                  ),
                 ],
               )
             ],

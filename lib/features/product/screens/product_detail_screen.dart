@@ -75,6 +75,7 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                   color: Colors.white,
                   fontSize: 16,
                   fontWeight: FontWeight.w700,
+                  fontFamily: "Gabarito"
                 ),
               ),
               const Text(
