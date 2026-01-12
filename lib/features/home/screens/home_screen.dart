@@ -5,7 +5,7 @@ import 'package:shoflex/core/utils/app_data.dart';
 import 'package:shoflex/features/cart/screens/cart_screen.dart';
 import 'package:shoflex/features/home/widgets/categories_widget.dart';
 import 'package:shoflex/features/home/widgets/trending_list.dart';
-import 'package:shoflex/search/screens/empty_search.dart';
+import 'package:shoflex/features/search/screens/empty_search.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

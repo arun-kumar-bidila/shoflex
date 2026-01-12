@@ -19,8 +19,8 @@ class CategoriesWidget extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                   builder: (context) => CategoryProducts(
-                    categoryName: dummyProducts[index]
-                        .category, // Use the category from your data
+                    categoryName: categories[index]["title"].toString()
+                         
                   ),
                 ),
               );

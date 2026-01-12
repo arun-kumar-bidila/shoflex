@@ -20,7 +20,7 @@ class CartProvider with ChangeNotifier {
 
   get totalPrice => null;
 
-  /// Unique key based on product + attributes
+  
   String _generateKey(Product product, String size, String color) {
     return '${product.name}-$size-$color';
   }

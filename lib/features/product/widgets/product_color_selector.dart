@@ -41,7 +41,7 @@ class _ProductColorSelectorState extends State<ProductColorSelector> {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                // ---------- HEADER ----------
+                //  HEADER 
                 Row(
                   children: [
                     const SizedBox(width: 48),
@@ -88,7 +88,7 @@ class _ProductColorSelectorState extends State<ProductColorSelector> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          // ---------- COLOR NAME ----------
+                          //  COLOR NAME
                           Text(
                             colorName,
                             style: TextStyle(

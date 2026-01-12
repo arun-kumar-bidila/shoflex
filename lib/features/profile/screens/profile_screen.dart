@@ -90,7 +90,7 @@ class ProfileScreen extends StatelessWidget {
 
                     const SizedBox(height: 20),
 
-                    // Feature Tiles
+                    // Feature Cards
                     ProfileFeature(
                       title: "Address",
                       onTap: () {},

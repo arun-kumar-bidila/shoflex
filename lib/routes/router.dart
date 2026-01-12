@@ -9,9 +9,9 @@ import 'package:shoflex/features/orders/screens/order_placed.dart';
 import 'package:shoflex/features/orders/screens/orders_screen.dart';
 import 'package:shoflex/features/orders/screens/track_order_screen.dart';
 import 'package:shoflex/features/product/screens/product_detail_screen.dart';
-import 'package:shoflex/models/order_model.dart';
+
 import 'package:shoflex/models/product_model.dart';
-import 'package:shoflex/search/screens/empty_search.dart';
+import 'package:shoflex/features/search/screens/empty_search.dart';
 import 'package:shoflex/widgets/bottombar.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {

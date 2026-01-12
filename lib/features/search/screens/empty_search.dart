@@ -13,11 +13,10 @@ class EmptySearch extends StatelessWidget {
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24.0),
+          padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Column(
             children: [
-              const SizedBox(height: 10),
-              // --- Header: Back Button & Search Bar ---
+              const SizedBox(height: 20),
               Row(
                 children: [
                   InkWell(
@@ -52,22 +51,35 @@ class EmptySearch extends StatelessWidget {
                         children: [
                           SvgPicture.asset("assets/search.svg", height: 20),
                           const SizedBox(width: 10),
-                          const Text(
-                            "Search",
-                            style: TextStyle(
+                          
+                          Expanded(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                hintText: "Search",
+                                hintStyle: const TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 12,
+                                ),
+                                border: InputBorder
+                                    .none, 
+                                isDense: true, 
+                                contentPadding:
+                                    EdgeInsets.zero, 
+                              ),
+                              style: const TextStyle(
                                 color: Colors.black,
                                 fontWeight: FontWeight.w500,
-                                fontSize: 12),
-                          )
+                                fontSize: 12,
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ),
                   ),
                 ],
               ),
-
-             
-
               Expanded(
                 child: Center(
                   child: Padding(
@@ -92,8 +104,8 @@ class EmptySearch extends StatelessWidget {
                         SizedBox(height: 40),
                         GestureDetector(
                           onTap: () {
-                          Navigator.pushNamed(context, Bottombar.routeName);
-                        },
+                            Navigator.pushNamed(context, Bottombar.routeName);
+                          },
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
                             children: [
@@ -122,8 +134,6 @@ class EmptySearch extends StatelessWidget {
                   ),
                 ),
               ),
-
-              
             ],
           ),
         ),

@@ -32,12 +32,12 @@ flutter run
 
 ## 🛠️ Supported Versions
 
-| Tool        | Version      |
-| ----------- | ------------ |
+| Tool        | Version       |
+| ----------- | ------------  |
 | Flutter SDK | **>= 3.27.1** |
-| Dart SDK    | **>= 3.6.0** |
-| Android     | API 21+      |
-| iOS         | iOS 12+      |
+| Dart SDK    | **>= 3.6.0**  |
+| Android     | API 21+       |
+| iOS         | iOS 12+       |
 
 
 
@@ -78,7 +78,8 @@ flutter run
 shoflex/
 ├── lib/
 │   ├── core/
-│   │   └── constants/        # App-wide constants (e.g., app_colors.dart)
+│   │   ├── constants/        # App-wide constants (e.g., app_colors.dart)
+|   |   └── utils/            # App Data
 │   ├── features/             # Feature-based modules
 │   │   ├── home/             # Dashboard and discovery
 │   │   ├── orders/           # Tracking and order history
@@ -89,8 +90,8 @@ shoflex/
 │   ├── providers/            # State management (Cart/Order Providers)
 │   ├── routes/               # App routing (router.dart)
 │   ├── widgets/              # Reusable global UI components
-│   ├── bottombar.dart        # Main navigation scaffolding
 │   └── main.dart             # Entry point
+│   
 ├── assets/
 │   ├── fonts/                # Custom fonts (ClimateCrisis, Gabarito)
 │   ├── icons/                # SVG vector graphics

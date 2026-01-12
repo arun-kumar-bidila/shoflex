@@ -102,7 +102,7 @@ class CartSummarySection extends StatelessWidget {
           const SizedBox(height: 16),
           InkWell(
             onTap: () {
-              // Optional: focus the TextField or handle tap
+             
             },
             borderRadius: BorderRadius.circular(14),
             child: Container(
@@ -121,7 +121,7 @@ class CartSummarySection extends StatelessWidget {
                   ),
                   const SizedBox(width: 12),
 
-                  // PLACEHOLDER TEXT USING TextField
+                  // PLACEHOLDER TextField
                   Expanded(
                     child: TextField(
                       decoration: InputDecoration(
@@ -143,7 +143,7 @@ class CartSummarySection extends StatelessWidget {
                     ),
                   ),
 
-                  // RIGHT ARROW BUTTON (using ColorFilter)
+                  // RIGHT ARROW BUTTON 
                   Container(
                     width: 36,
                     height: 36,
@@ -157,7 +157,7 @@ class CartSummarySection extends StatelessWidget {
                         width: 20,
                         height: 20,
                         colorFilter: ColorFilter.mode(
-                          Colors.white, // the color you want for arrow
+                          Colors.white, 
                           BlendMode.srcIn,
                         ),
                       ),

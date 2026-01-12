@@ -101,7 +101,7 @@ class CartItemTile extends StatelessWidget {
                         ),
                       ],
                     ),
-                    // SIZE & COLOR
+                   
 
                     // QUANTITY CONTROLS
                     Row(

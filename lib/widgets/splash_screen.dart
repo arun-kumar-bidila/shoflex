@@ -18,8 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
 
-    // Navigate after 2 seconds
-    Timer(const Duration(seconds: 2), () {
+   
+    Timer(const Duration(seconds: 4), () {
       Navigator.pushReplacementNamed(
         context,
         EmailLogin.routeName,
@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.buttonColor, // outer background
+      backgroundColor: AppColors.buttonColor,
       body: Center(
         child: const Center(
           child: Text(

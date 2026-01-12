@@ -28,14 +28,14 @@ class _CategorySelectionState extends State<CategorySelection> {
               child: GestureDetector(
                 onTap: () {
                   setState(() {
-                    selectedButton = "Men"; // select Men
+                    selectedButton = "Men"; 
                   });
                 },
                 child: Container(
                   decoration: BoxDecoration(
                     color: selectedButton == "Men"
                         ? AppColors.buttonColor
-                        : AppColors.fillColor, // only Men changes
+                        : AppColors.fillColor, 
                     borderRadius: BorderRadius.circular(100),
                   ),
                   alignment: Alignment.center,
@@ -56,14 +56,14 @@ class _CategorySelectionState extends State<CategorySelection> {
               child: GestureDetector(
                 onTap: () {
                   setState(() {
-                    selectedButton = "Women"; // select Women
+                    selectedButton = "Women"; 
                   });
                 },
                 child: Container(
                   decoration: BoxDecoration(
                     color: selectedButton == "Women"
                         ? AppColors.buttonColor
-                        : AppColors.fillColor, // only Women changes
+                        : AppColors.fillColor, 
                     borderRadius: BorderRadius.circular(100),
                   ),
                   alignment: Alignment.center,

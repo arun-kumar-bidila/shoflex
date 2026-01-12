@@ -96,7 +96,7 @@ class PaymentScreen extends StatelessWidget {
                                   ),
                                   SizedBox(height: 6),
                                   Text(
-                                    "2715 Ash Dr. San Jose, South Dakota 83475",
+                                    "2715 Ash Dr. San Jose, Dak",
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: const TextStyle(
@@ -169,7 +169,7 @@ class PaymentScreen extends StatelessWidget {
                       ),
                     ),
 
-                    // Summary Section
+                   
                     
                   ],
                 ),

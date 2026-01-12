@@ -63,14 +63,14 @@ class TrackOrderScreen extends StatelessWidget {
               SizedBox(
                 height: 40,
               ),
-              // --- Timeline Section ---
-              _buildTimelineStep("Delivered", "28 May",
+              // Timeline 
+              buildTimelineStep("Delivered", "28 May",
                   isCompleted: false, isLast: false),
-              _buildTimelineStep("Shipped", "28 May",
+              buildTimelineStep("Shipped", "28 May",
                   isCompleted: true, isLast: false),
-              _buildTimelineStep("Order Confirmed", "28 May",
+              buildTimelineStep("Order Confirmed", "28 May",
                   isCompleted: true, isLast: false),
-              _buildTimelineStep("Order Placed", "28 May",
+              buildTimelineStep("Order Placed", "28 May",
                   isCompleted: true, isLast: true),
 
               const SizedBox(height: 25),
@@ -145,7 +145,7 @@ class TrackOrderScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildTimelineStep(String title, String date,
+  Widget buildTimelineStep(String title, String date,
       {required bool isCompleted, required bool isLast}) {
     return IntrinsicHeight(
       child: Row(
