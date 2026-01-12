@@ -5,6 +5,7 @@ import 'package:shoflex/core/utils/app_data.dart';
 import 'package:shoflex/features/cart/screens/cart_screen.dart';
 import 'package:shoflex/features/home/widgets/categories_widget.dart';
 import 'package:shoflex/features/home/widgets/trending_list.dart';
+import 'package:shoflex/search/screens/empty_search.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -79,25 +80,30 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 20),
 
               /// Search
-              Container(
-                height: 40,
-                padding: const EdgeInsets.symmetric(horizontal: 14),
-                decoration: BoxDecoration(
-                  color: AppColors.fillColor,
-                  borderRadius: BorderRadius.circular(100),
-                ),
-                child: Row(
-                  children: [
-                    SvgPicture.asset("assets/search.svg", height: 20),
-                    const SizedBox(width: 10),
-                    const Text(
-                      "Search",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 12),
-                    )
-                  ],
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, EmptySearch.routeName);
+                },
+                child: Container(
+                  height: 40,
+                  padding: const EdgeInsets.symmetric(horizontal: 14),
+                  decoration: BoxDecoration(
+                    color: AppColors.fillColor,
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  child: Row(
+                    children: [
+                      SvgPicture.asset("assets/search.svg", height: 20),
+                      const SizedBox(width: 10),
+                      const Text(
+                        "Search",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 12),
+                      )
+                    ],
+                  ),
                 ),
               ),
 

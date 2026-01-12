@@ -6,6 +6,7 @@ import 'package:shoflex/features/auth/screens/password_login.dart';
 import 'package:shoflex/features/cart/screens/cart_screen.dart';
 import 'package:shoflex/features/product/screens/product_detail_screen.dart';
 import 'package:shoflex/models/product_model.dart';
+import 'package:shoflex/search/screens/empty_search.dart';
 import 'package:shoflex/widgets/bottombar.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings) {
@@ -30,13 +31,16 @@ Route<dynamic> generateRoute(RouteSettings routeSettings) {
       return MaterialPageRoute(
           settings: routeSettings, builder: (_) => CartScreen());
     case ProductDetailScreen.routeName:
-      
       final product = routeSettings.arguments as Product;
 
       return MaterialPageRoute(
         settings: routeSettings,
         builder: (_) => ProductDetailScreen(product: product),
       );
+
+    case EmptySearch.routeName:
+      return MaterialPageRoute(
+          settings: routeSettings, builder: (_) => EmptySearch());
 
     default:
       return MaterialPageRoute(

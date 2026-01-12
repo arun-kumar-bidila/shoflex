@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 class ProductColorSelector extends StatefulWidget {
   final List<String> colors;
   final String? initialColor;
+  final ValueChanged<String> onColorSelected;
 
   const ProductColorSelector({
     super.key,
     required this.colors,
+    required this.onColorSelected,
     this.initialColor,
   });
 
@@ -42,7 +44,8 @@ class _ProductColorSelectorState extends State<ProductColorSelector> {
                 children: [
                   const Text(
                     "Select Color",
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                        fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                   IconButton(
                     icon: const Icon(Icons.close),
@@ -59,6 +62,10 @@ class _ProductColorSelectorState extends State<ProductColorSelector> {
                 return GestureDetector(
                   onTap: () {
                     setState(() => selectedColor = colorName);
+
+                    /// 🔥 Notify parent
+                    widget.onColorSelected(colorName);
+
                     Navigator.pop(context);
                   },
                   child: Container(
@@ -120,7 +127,8 @@ class _ProductColorSelectorState extends State<ProductColorSelector> {
         onTap: _openColorBottomSheet,
         borderRadius: BorderRadius.circular(10),
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          padding: const EdgeInsets.symmetric(
+              horizontal: 16, vertical: 14),
           decoration: BoxDecoration(
             color: Colors.grey.shade100,
             borderRadius: BorderRadius.circular(10),
@@ -128,13 +136,16 @@ class _ProductColorSelectorState extends State<ProductColorSelector> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text("Color",
-                  style: TextStyle(fontWeight: FontWeight.w500)),
+              const Text(
+                "Color",
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
               Row(
                 children: [
                   Text(
                     selectedColor ?? "Select Color",
-                    style: const TextStyle(fontWeight: FontWeight.bold),
+                    style:
+                        const TextStyle(fontWeight: FontWeight.bold),
                   ),
                   const Icon(Icons.keyboard_arrow_down,
                       color: Colors.grey),

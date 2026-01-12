@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class ProductSizeSelector extends StatefulWidget {
   final List<String> sizes;
-  // final ValueChanged<String> onSizeSelected;
   final String? initialSize;
+  final ValueChanged<String> onSizeSelected;
 
   const ProductSizeSelector({
     super.key,
     required this.sizes,
-    // required this.onSizeSelected,
+    required this.onSizeSelected,
     this.initialSize,
   });
 
@@ -41,9 +41,10 @@ class _ProductSizeSelectorState extends State<ProductSizeSelector> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Select Size",
-                      style: const TextStyle(
-                          fontSize: 18, fontWeight: FontWeight.bold)),
+                  const Text(
+                    "Select Size",
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
                   IconButton(
                     icon: const Icon(Icons.close),
                     onPressed: () => Navigator.pop(context),
@@ -57,18 +58,24 @@ class _ProductSizeSelectorState extends State<ProductSizeSelector> {
                 return GestureDetector(
                   onTap: () {
                     setState(() => selectedSize = size);
-                    // widget.onSizeSelected(size);
+
+                    /// 🔥 Notify parent
+                    widget.onSizeSelected(size);
+
                     Navigator.pop(context);
                   },
                   child: Container(
                     margin: const EdgeInsets.only(bottom: 12),
                     padding: const EdgeInsets.symmetric(
-                        vertical: 14, horizontal: 16),
+                      vertical: 14,
+                      horizontal: 16,
+                    ),
                     decoration: BoxDecoration(
                       color: isSelected ? Colors.blue : Colors.transparent,
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(
-                        color: isSelected ? Colors.blue : Colors.grey.shade300,
+                        color:
+                            isSelected ? Colors.blue : Colors.grey.shade300,
                       ),
                     ),
                     child: Row(
@@ -79,7 +86,8 @@ class _ProductSizeSelectorState extends State<ProductSizeSelector> {
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w500,
-                            color: isSelected ? Colors.white : Colors.black,
+                            color:
+                                isSelected ? Colors.white : Colors.black,
                           ),
                         ),
                         if (isSelected)
@@ -100,34 +108,34 @@ class _ProductSizeSelectorState extends State<ProductSizeSelector> {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
-      child: Column(
-        children: [
-          InkWell(
-            onTap: _openSizeBottomSheet,
+      child: InkWell(
+        onTap: _openSizeBottomSheet,
+        borderRadius: BorderRadius.circular(10),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          decoration: BoxDecoration(
+            color: Colors.grey.shade100,
             borderRadius: BorderRadius.circular(10),
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-              decoration: BoxDecoration(
-                color: Colors.grey.shade100,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text("Size", style: const TextStyle(fontWeight: FontWeight.w500)),
-                  Row(
-                    children: [
-                      Text(selectedSize ?? "Select Size",
-                          style: const TextStyle(fontWeight: FontWeight.bold)),
-                      const Icon(Icons.keyboard_arrow_down, color: Colors.grey),
-                    ],
-                  )
-                ],
-              ),
-            ),
           ),
-          
-        ],
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                "Size",
+                style: TextStyle(fontWeight: FontWeight.w500),
+              ),
+              Row(
+                children: [
+                  Text(
+                    selectedSize ?? "Select Size",
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  const Icon(Icons.keyboard_arrow_down, color: Colors.grey),
+                ],
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
