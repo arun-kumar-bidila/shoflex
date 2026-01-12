@@ -92,8 +92,8 @@ class TrackOrderScreen extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.w500)),
                     const Spacer(),
-                    TextButton(
-                      onPressed: () {},
+                    GestureDetector(
+                      onTap: () {},
                       child: const Text("View All",
                           style: TextStyle(
                               color: AppColors.buttonColor,

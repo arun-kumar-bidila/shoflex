@@ -15,9 +15,9 @@ class LoginProviderButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: onTap,
-      borderRadius: BorderRadius.circular(30),
+      
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 10),
         height: 50,

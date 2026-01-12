@@ -16,6 +16,7 @@ class TrendingList extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: products.length,
+        
         itemBuilder: (context, index) {
           final product = products[index];
 

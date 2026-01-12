@@ -74,8 +74,8 @@ class ProfileScreen extends StatelessWidget {
                               ],
                             ),
                           ),
-                          TextButton(
-                            onPressed: () {},
+                          GestureDetector(
+                            onTap: () {},
                             child: Text(
                               "Edit",
                               style: TextStyle(

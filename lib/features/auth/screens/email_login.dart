@@ -4,6 +4,7 @@ import 'package:shoflex/core/constants/app_colors.dart';
 import 'package:shoflex/features/auth/screens/create_account.dart';
 import 'package:shoflex/features/auth/screens/password_login.dart';
 import 'package:shoflex/features/auth/widgets/login_provider_button.dart';
+import 'package:shoflex/widgets/bottombar.dart';
 import 'package:shoflex/widgets/custom_button.dart';
 import 'package:shoflex/widgets/custom_textform_field.dart';
 
@@ -36,10 +37,10 @@ class _EmailLoginState extends State<EmailLogin> {
               Text(
                 "Sign in",
                 style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 32,
-                    fontWeight: FontWeight.w700,
-                    ),
+                  color: Colors.black,
+                  fontSize: 32,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
               SizedBox(
                 height: 30,
@@ -54,8 +55,7 @@ class _EmailLoginState extends State<EmailLogin> {
               CustomButton(
                 buttonName: "Continue",
                 onTap: () async {
-                  Navigator.pushNamed(
-                                  context, PasswordLogin.routeName);
+                  Navigator.pushNamed(context, PasswordLogin.routeName);
                 },
               ),
               Container(
@@ -91,19 +91,24 @@ class _EmailLoginState extends State<EmailLogin> {
               LoginProviderButton(
                 imagePath: "assets/apple.png",
                 text: "Continue with Apple",
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, Bottombar.routeName);
+                },
               ),
               LoginProviderButton(
                 imagePath: "assets/fb.png",
                 text: "Continue with Facebook",
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, Bottombar.routeName);
+                },
               ),
               LoginProviderButton(
                 imagePath: "assets/google.png",
                 text: "Continue with Google",
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, Bottombar.routeName);
+                },
               ),
-
             ],
           ),
         ),
