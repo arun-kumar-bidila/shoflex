@@ -3,26 +3,37 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shoflex/core/constants/app_colors.dart';
 import 'package:shoflex/features/home/screens/home_screen.dart';
 import 'package:shoflex/features/notification/screens/notifications_screen.dart';
-import 'package:shoflex/features/orders/widgets/no_orders.dart';
+import 'package:shoflex/features/orders/screens/orders_screen.dart';
 import 'package:shoflex/features/profile/screens/profile_screen.dart';
 
 class Bottombar extends StatefulWidget {
   static const String routeName = "/bottombar";
-  const Bottombar({super.key});
+  final int initialPage;
+
+  const Bottombar({
+    super.key,
+    this.initialPage = 0,
+  });
 
   @override
   State<Bottombar> createState() => _BottombarState();
 }
 
 class _BottombarState extends State<Bottombar> {
-  int page = 0;
+late int page;
 
   final List<Widget> pages = [
     HomeScreen(),
     NotificationsScreen(),
-    NoOrders(),
+    OrdersScreen(),
     ProfileScreen()
   ];
+  
+  @override
+  void initState() {
+    super.initState();
+    page = widget.initialPage;
+  }
 
   void updatePage(int index) {
     setState(() {

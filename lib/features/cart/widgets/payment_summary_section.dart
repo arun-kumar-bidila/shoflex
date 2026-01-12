@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+
 import 'package:provider/provider.dart';
 import 'package:shoflex/core/constants/app_colors.dart';
-import 'package:shoflex/features/cart/screens/payment_screen.dart';
-import 'package:shoflex/features/orders/screens/orders_screen.dart';
+import 'package:shoflex/features/orders/screens/order_placed.dart';
+
 import 'package:shoflex/providers/cart_provider.dart';
 import 'package:shoflex/providers/order_provider.dart';
 import 'package:shoflex/widgets/bottombar.dart';
-import 'package:shoflex/widgets/custom_button.dart';
 
-class CartSummarySection extends StatelessWidget {
-  const CartSummarySection({super.key});
+class PaymentSummarySection extends StatelessWidget {
+  const PaymentSummarySection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -100,79 +99,52 @@ class CartSummarySection extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 16),
-          InkWell(
+          GestureDetector(
             onTap: () {
-              // Optional: focus the TextField or handle tap
+              final cartProvider =
+                  Provider.of<CartProvider>(context, listen: false);
+              final orderProvider =
+                  Provider.of<OrderProvider>(context, listen: false);
+
+              if (cartProvider.cartItems.isNotEmpty) {
+                orderProvider.placeOrder(
+                    cartItems: cartProvider.cartItems.values.toList());
+                cartProvider.clearCart();
+                Navigator.pushNamed(context, OrderPlaced.routeName);
+              }
             },
-            borderRadius: BorderRadius.circular(14),
             child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              margin: const EdgeInsets.only( bottom: 16),
               decoration: BoxDecoration(
-                color: AppColors.fillColor,
-                borderRadius: BorderRadius.circular(8),
+                color: AppColors.buttonColor,
+                borderRadius: BorderRadius.circular(100),
               ),
+              alignment: Alignment.center,
+              height: 52,
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // LEFT ICON
-                  SvgPicture.asset(
-                    "assets/discountshape.svg",
-                    width: 20,
-                    height: 20,
-                  ),
-                  const SizedBox(width: 12),
-
-                  // PLACEHOLDER TEXT USING TextField
-                  Expanded(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: "Enter Coupon Code",
-                        hintStyle: const TextStyle(
-                          fontSize: 12,
-                          color: Colors.black54,
-                          fontWeight: FontWeight.w500,
-                        ),
-                        border: InputBorder.none,
-                        isDense: true,
-                        contentPadding: EdgeInsets.zero,
-                      ),
-                      style: const TextStyle(
-                        fontSize: 12,
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                      ),
+                  Text(
+                    "₹${cart.total.toStringAsFixed(2)}",
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
-
-                  // RIGHT ARROW BUTTON (using ColorFilter)
-                  Container(
-                    width: 36,
-                    height: 36,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.blue,
-                    ),
-                    child: Center(
-                      child: SvgPicture.asset(
-                        "assets/forwardarrow.svg",
-                        width: 20,
-                        height: 20,
-                        colorFilter: ColorFilter.mode(
-                          Colors.white, // the color you want for arrow
-                          BlendMode.srcIn,
-                        ),
-                      ),
+                  const Text(
+                    "Place Order",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                 ],
               ),
             ),
           ),
-          const SizedBox(height: 16),
-          CustomButton(
-              buttonName: "CheckOut",
-              onTap: () {
-                Navigator.pushNamed(context, PaymentScreen.routeName);
-              })
         ],
       ),
     );

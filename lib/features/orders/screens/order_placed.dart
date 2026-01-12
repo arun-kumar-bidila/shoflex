@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:shoflex/core/constants/app_colors.dart';
+import 'package:shoflex/widgets/bottombar.dart';
 import 'package:shoflex/widgets/custom_button.dart';
 
 class OrderPlaced extends StatefulWidget {
+  static const String routeName = "/order-placed";
   const OrderPlaced({super.key});
 
   @override
@@ -40,7 +42,7 @@ class _OrderPlacedState extends State<OrderPlaced> {
                   topRight: Radius.circular(40),
                 ),
               ),
-              padding: EdgeInsets.only(left: 30,right: 30, top: 40),
+              padding: EdgeInsets.only(left: 30, right: 30, top: 40),
               child: Column(
                 children: [
                   const Text(
@@ -66,7 +68,11 @@ class _OrderPlacedState extends State<OrderPlaced> {
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 60),
                     child: CustomButton(
-                        buttonName: "See Order Details", onTap: () {}),
+                        buttonName: "See Order Details",
+                        onTap: () {
+                          Navigator.pushNamed(context, Bottombar.routeName,
+                              arguments: 2);
+                        }),
                   )
                 ],
               ),
