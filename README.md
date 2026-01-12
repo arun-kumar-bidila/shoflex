@@ -34,7 +34,7 @@ flutter run
 
 | Tool        | Version      |
 | ----------- | ------------ |
-| Flutter SDK | **>= 3.6.0** |
+| Flutter SDK | **>= 3.27.1** |
 | Dart SDK    | **>= 3.6.0** |
 | Android     | API 21+      |
 | iOS         | iOS 12+      |
