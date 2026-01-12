@@ -28,6 +28,7 @@ class TrendingList extends StatelessWidget {
               );
             },
             child: Container(
+              width: 160,
               margin: EdgeInsets.only(right: 15),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
@@ -39,8 +40,11 @@ class TrendingList extends StatelessWidget {
                     child: Stack(
                       children: [
                         Center(
-                          child: Image.asset(product.images[0],
-                              fit: BoxFit.contain),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.vertical(top: Radius.circular(8)),
+                            child: Image.asset(product.images[0],
+                                fit: BoxFit.contain),
+                          ),
                         ),
                         Positioned(
                           top: 10,

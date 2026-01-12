@@ -16,7 +16,7 @@ class CategoryProducts extends StatelessWidget {
         .toList();
 
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.background,
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,8 +89,11 @@ class CategoryProducts extends StatelessWidget {
                             child: Stack(
                               children: [
                                 Center(
-                                  child: Image.asset(product.images[0],
-                                      fit: BoxFit.contain),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.vertical(top: Radius.circular(8)),
+                                    child: Image.asset(product.images[0],
+                                        fit: BoxFit.contain),
+                                  ),
                                 ),
                                 Positioned(
                                   top: 10,
