@@ -1,17 +1,17 @@
-🛍️ 
-## Shoflex – Flutter E-Commerce Application
+ 
+## 🛍️ Shoflex – Flutter E-Commerce Application
 
 Shoflex is a modern, scalable Flutter-based e-commerce mobile application designed with clean UI, smooth navigation, and a modular architecture.
 The app supports product browsing, cart management, order placement, and user profile handling with a strong focus on performance and maintainability.
 
 
-⚙️ 
-## Setup Instructions
+ 
+## ⚙️ Setup Instructions
 
 1️⃣ Clone Repository
 
-git clone https://github.com/arun-kumar-bidila/shoflex.git
-cd shoflex
+- git clone https://github.com/arun-kumar-bidila/shoflex.git
+- cd shoflex
 
 2️⃣ Install Dependencies
 
@@ -22,19 +22,29 @@ flutter pub get
 flutter run
 
 
-📱 
-## Supported Platforms
+ 
+## 📱 Supported Platforms
 
 ✅ Android
 
 ✅ iOS
 
 
-🚀 
-## Features
+## 🛠️ Supported Versions
 
-User Authentication (Login / Signup)
+| Tool        | Version      |
+| ----------- | ------------ |
+| Flutter SDK | **>= 3.6.0** |
+| Dart SDK    | **>= 3.6.0** |
+| Android     | API 21+      |
+| iOS         | iOS 12+      |
 
+
+
+ 
+## 🚀 Features
+
+- User Authentication (Login / Signup)
 - Product Categories & Listings
 - Cart Management
 - Order Placement & Order History
@@ -46,33 +56,8 @@ User Authentication (Login / Signup)
 - Provider-based State Management
 
 
-📁 
-## Folder Structure
-
-shoflex/
-├── lib/
-│   ├── core/constants/      # App-wide constants (e.g., app_colors.dart)
-│   ├── features/            # Feature-based modules
-│   │   ├── home/            # Dashboard and discovery
-│   │   ├── orders/          # Tracking and order history
-│   │   ├── product/         # Product details and selection
-│   │   ├── search/          # Search logic and empty states
-│   │   └── profile/         # User account management
-│   ├── models/              # Cart, Order, and Product data models
-│   ├── providers/           # State management (Cart/Order Providers)
-│   ├── routes/              # App routing (router.dart)
-│   ├── widgets/             # Reusable global UI components
-│   ├── bottombar.dart       # Main navigation scaffolding
-│   └── main.dart            # Entry point
-├── assets/
-│   ├── fonts/               # Custom fonts (ClimateCrisis, Gabarito)
-│   ├── icons/               # SVG vector graphics
-│   └── products/            # Product imagery
-└── pubspec.yaml             # Dependency management
-
-
-🎨 
-## Fonts Used
+ 
+## 🎨 Fonts Used
 
 - Climate Crisis
 - Gabarito
@@ -85,3 +70,32 @@ shoflex/
 - Clean code organization and modular widgets for reusability.
 - Custom theming and fonts applied consistently across the app.
 - Bottom navigation and other UI components follow Flutter best practices for responsiveness.
+
+
+## 📂 Folder Structure
+
+```text
+shoflex/
+├── lib/
+│   ├── core/
+│   │   └── constants/        # App-wide constants (e.g., app_colors.dart)
+│   ├── features/             # Feature-based modules
+│   │   ├── home/             # Dashboard and discovery
+│   │   ├── orders/           # Tracking and order history
+│   │   ├── product/          # Product details and selection
+│   │   ├── search/           # Search logic and empty states
+│   │   └── profile/          # User account management
+│   ├── models/               # Cart, Order, and Product data models
+│   ├── providers/            # State management (Cart/Order Providers)
+│   ├── routes/               # App routing (router.dart)
+│   ├── widgets/              # Reusable global UI components
+│   ├── bottombar.dart        # Main navigation scaffolding
+│   └── main.dart             # Entry point
+├── assets/
+│   ├── fonts/                # Custom fonts (ClimateCrisis, Gabarito)
+│   ├── icons/                # SVG vector graphics
+│   └── products/             # Product imagery
+└── pubspec.yaml              # Dependency management
+
+
+
